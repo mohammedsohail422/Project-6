@@ -2,27 +2,27 @@ let myObj = {
   products: [
     {
       ProductImage: "/Projects/Project-6/images/sliders/s4.jpg",
-      ProductName: "Highlight",
-    },
-    {
-      ProductImage: "/Projects/Project-6/images/sliders/s2.jpg",
-      ProductName: "Vacation",
-    },
-    {
-      ProductImage: "/Projects/Project-6/images/sliders/s3.jpg",
-      ProductName: "London",
+      ProductName: "Highlight🎈",
     },
     {
       ProductImage: "/Projects/Project-6/images/sliders/s6.jpg",
+      ProductName: "Vacation",
+    },
+    {
+      ProductImage: "/Projects/Project-6/images/sliders/s7.jpg",
+      ProductName: "London🎢",
+    },
+    {
+      ProductImage: "/Projects/Project-6/images/sliders/s8.jpg",
       ProductName: "USA",
     },
     {
-      ProductImage: "/Projects/Project-6/images/sliders/s5.jpg",
-      ProductName: "workshop",
+      ProductImage: "/Projects/Project-6/images/sliders/s3.jpg",
+      ProductName: "Birthday🎂",
     },
     {
-      ProductImage: "/Projects/Project-6/images/sliders/s1.jpg",
-      ProductName: "office",
+      ProductImage: "/Projects/Project-6/images/sliders/s2.jpg",
+      ProductName: "office💻",
     },
     {
       ProductImage: "/Projects/Project-6/images/sliders/s3.jpg",
@@ -94,3 +94,4 @@ function scrollHorizontal(val) {
   }
   sCont.style.left = currentScrollPosition + "px";
 }
+//fetch

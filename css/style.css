@@ -13,7 +13,7 @@
   justify-content: center;
   gap: 6em;
   align-items: center;
-  padding: 2em 0;
+  padding-top: 2em;
 }
 .main .insta-profile img {
   border-radius: 50%;
@@ -127,6 +127,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2.3em 0;
 }
 .horizontal-scroll {
   width: 73%;
@@ -179,4 +180,46 @@ p {
   border-radius: 50%;
   border: 2px solid #fff;
   outline: 2px solid #ccc;
+}
+/* posts */
+.posts {
+  border-top: 1px solid #ccc;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+  padding: 1em 0;
+}
+.post {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+.post h4 {
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+.reels,
+.tagged {
+  opacity: 0.5;
+}
+.post-img {
+  width: 80%;
+  display: grid;
+  gap: 2em;
+  margin: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+  justify-content: center;
+  width: 290px;
+  height: 290px;
+}
+.post-img img {
+  border: 1px solid #ccc;
+  width: 270px;
+  height: 300px;
 }

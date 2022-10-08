@@ -129,9 +129,8 @@ p {
   align-items: center;
 }
 .horizontal-scroll {
-  width: 90%;
-  height: 100px;
-  border: 1px solid #ddd;
+  width: 73%;
+  height: 130px;
   border-radius: 5px;
   display: flex;
   flex-direction: row;
@@ -150,21 +149,26 @@ p {
   z-index: 1;
   cursor: pointer;
   box-shadow: 0 0 10px #999;
+  transition: 1s;
 }
 .storys-container {
   display: flex;
+  /* gap: 2em; */
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   position: absolute;
   left: 0;
+  transition: 0.5s all ease-out;
 }
 .story-circle {
-  background: linear-gradient(rgb(231, 0, 231), rgb(255, 115, 0));
-  width: 90px;
-  height: 90px;
+  /* background: linear-gradient(rgb(231, 0, 231), rgb(255, 115, 0)); */
+  width: 120px;
+  height: 120px;
   margin: 0.7em 1.1em;
   display: flex;
+  gap: 1em;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
@@ -174,4 +178,5 @@ p {
   height: 86px;
   border-radius: 50%;
   border: 2px solid #fff;
+  outline: 2px solid #ccc;
 }

@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI";
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 200, "opsz" 48;
+  color: #00acee;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  gap: 4em;
+  align-items: center;
+  padding: 2em 0;
+}
+.main .insta-profile img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+.pk-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+.insta-profile {
+  position: relative;
+}
+.main .insta-profile .insta-circle {
+  width: 215px;
+  height: 215px;
+}
+.insta-circle {
+  position: absolute;
+  top: -8px;
+  left: -7px;
+  cursor: pointer;
+}
+.pk1 {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.pk1 h5 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+.pk1 button {
+  font-size: 0.9rem;
+  border: none;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 80px;
+  height: 30px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.pk1 img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.pk1 .blue-btn {
+  background-color: rgb(0, 149, 246);
+  color: #fff;
+}
+.pk1 .blue-arrow-btn {
+  background-color: rgb(0, 149, 246);
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+.fa-ellipsis {
+  font-size: 1.2rem;
+  margin-left: 0.5em;
+}
+.pk1a {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+.pk2 {
+  display: flex;
+  gap: 1.5em;
+}
+.pk2 h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.pk2 h5 span {
+  font-weight: 400;
+}
+.pk2 button {
+  background-color: red;
+}
+.pk3 h5 {
+  font-weight: 600;
+  margin: 0;
+}
+p {
+  letter-spacing: 0.9px;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+.pk3 a {
+  text-decoration: none;
+  color: rgb(0, 55, 107);
+  font-weight: 600;
+}
+.pk4 h5 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgb(142, 142, 142);
+  cursor: pointer;
+}
+.pk4 h5 span {
+  color: black;
+}

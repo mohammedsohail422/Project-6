@@ -76,7 +76,7 @@ btnScrollLeft.style.opacity = 0;
 let maxScroll = -sCont.offsetWidth + hScroll.offsetWidth;
 
 function scrollHorizontal(val) {
-  console.log(val);
+  // console.log(val);
   currentScrollPosition += val * scrollAmount;
   if (currentScrollPosition >= 0) {
     currentScrollPosition = 0;
@@ -86,7 +86,7 @@ function scrollHorizontal(val) {
   }
   if (currentScrollPosition <= maxScroll) {
     currentScrollPosition = maxScroll;
-    console.log(maxScroll);
+    // console.log(maxScroll);
     btnScrollRight.style.opacity = 0;
   } else {
     btnScrollRight.style.opacity = 1;
@@ -126,11 +126,10 @@ submit.addEventListener("click", () => {
       return response.json();
     })
     .then((data) => {
-      console.log(data);
       let data1 = "";
       for (let i = 0; i < inputValue; i++) {
         data1 += `<div class="image">
-        <img src=${data[i].url} alt="im" />
+        <img src=${data[i].url} alt="im" class="start-progress" />
       </div>`;
       }
       document.querySelector(".image-container").innerHTML = data1;
@@ -140,24 +139,58 @@ submit.addEventListener("click", () => {
 
 //fun end
 
-//progress bar
+//pop
 
-let imgPop = document
-  .querySelectorAll(".image-container img")
-  .forEach((img) => {
-    console.log(img);
-    img.onclick = () => {
-      document.querySelector(".pop-image img").src = img.getAttribute("src");
-      document.querySelector(".pop-image").style.display = "block";
-      // console.log(image.getAttribute("src"));
-    };
-  });
+// let imgPop = document
+//   .querySelectorAll(".image-container img")
+//   .forEach((img) => {
+//     img.onclick = () => {
+//       console.log("clickeds");
+//       document.querySelector(".pop-image img").src = img.getAttribute("src");
+//       document.querySelector(".pop-image").style.display = "block";
+//       // console.log(image.getAttribute("src"));
+//     };
+//   });
 
-//close
-document.querySelector(".pop-image span").onclick = () => {
-  document.querySelector(".pop-image").style.display = "none";
-};
+// //close
+// document.querySelector(".pop-image span").onclick = () => {
+//   document.querySelector(".pop-image").style.display = "none";
+// };
 
-// imgPop.addEventListener("click", () => {
-//   console.log("clicked");
-// });
+// //pop end
+
+//circular progess hekki
+let circularProgress = document.querySelector(".circular-progress"),
+  progressValue = document.querySelector(".progress-value");
+let containerpro = document.querySelector(".containerpro");
+let startProgress = document.querySelector(".image-container img");
+
+startProgress.addEventListener("click", () => {
+  console.log("clicking");
+  document.body.style.backgroundColor = "#ccc";
+  containerpro.style.display = "flex";
+  let progressStartValue = 0,
+    progressEndValue = 100,
+    speed = 30;
+
+  let progress = setInterval(() => {
+    progressStartValue++;
+
+    progressValue.textContent = `${progressStartValue}%`;
+    circularProgress.style.background = `conic-gradient(#7d2ae8 ${
+      progressStartValue * 3.6
+    }deg, #ededed 0deg)`;
+
+    if (progressStartValue == progressEndValue) {
+      clearInterval(progress);
+    }
+  }, speed);
+});
+//
+let done = document.querySelector(".done");
+done.addEventListener("click", () => {
+  if (progressValue.innerHTML == "100%") {
+    containerpro.style.display = "none";
+    document.body.style.backgroundColor = "#fafafa";
+  }
+});

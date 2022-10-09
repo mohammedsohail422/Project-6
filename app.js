@@ -25,7 +25,7 @@ let myObj = {
       ProductName: "office💻",
     },
     {
-      ProductImage: "/Projects/Project-6/images/sliders/s3.jpg",
+      ProductImage: "/Projects/Project-6/images/sliders/s1.jpg",
       ProductName: "Banglore",
     },
     {
@@ -74,7 +74,6 @@ const btnScrollRight = document.querySelector("#btn-scroll-right");
 btnScrollLeft.style.opacity = 0;
 
 let maxScroll = -sCont.offsetWidth + hScroll.offsetWidth;
-console.log(maxScroll);
 
 function scrollHorizontal(val) {
   console.log(val);
@@ -94,4 +93,71 @@ function scrollHorizontal(val) {
   }
   sCont.style.left = currentScrollPosition + "px";
 }
-//fetch
+//follow
+let pk1a = document.querySelector(".pk1a");
+let blueBtn = document.querySelector(".blue-btn");
+
+blueBtn.addEventListener("click", () => {
+  if (blueBtn.innerHTML == "Follow") {
+    blueBtn.innerHTML = "Following";
+    pk1a.classList.add("follow");
+  } else {
+    blueBtn.innerHTML = "Follow";
+    pk1a.classList.remove("follow");
+  }
+});
+
+//
+//fun
+submit = document.querySelector("#submit");
+submit.addEventListener("click", () => {
+  let inputValue = document.querySelector("#input-value").value;
+  console.log(inputValue);
+  if (inputValue == "") {
+    alert(
+      "Please input the correct value or by default it will be consider as 12"
+    );
+    inputValue = 12;
+  }
+  //fetch
+  let urls = "https://jsonplaceholder.typicode.com/photos";
+  fetch(urls)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+      let data1 = "";
+      for (let i = 0; i < inputValue; i++) {
+        data1 += `<div class="image">
+        <img src=${data[i].url} alt="im" />
+      </div>`;
+      }
+      document.querySelector(".image-container").innerHTML = data1;
+    });
+  //
+});
+
+//fun end
+
+//progress bar
+
+let imgPop = document
+  .querySelectorAll(".image-container img")
+  .forEach((img) => {
+    console.log(img);
+    img.onclick = () => {
+      document.querySelector(".pop-image img").src = img.getAttribute("src");
+      document.querySelector(".pop-image").style.display = "block";
+      // console.log(image.getAttribute("src"));
+    };
+  });
+
+//close
+document.querySelector(".pop-image span").onclick = () => {
+  document.querySelector(".pop-image").style.display = "none";
+};
+
+// imgPop.addEventListener("click", () => {
+//   console.log("clicked");
+// });

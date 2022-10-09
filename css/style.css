@@ -3,6 +3,54 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Segoe UI";
+  scroll-behavior: smooth;
+}
+body {
+  background-color: rgb(250, 250, 250);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+  padding: 0.8em 0;
+  box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px,
+    rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+}
+.logo-text {
+  width: 115px;
+  height: 33px;
+}
+.icons img {
+  border-radius: 50%;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+nav i {
+  font-size: 1.4rem;
+}
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.3em;
+  cursor: pointer;
+}
+.search input {
+  background-color: #efefef;
+  border: none;
+  outline: none;
+  padding: 0.3em 1em;
+  border-radius: 8px;
+  height: 36px;
+  width: 18em;
+}
+.search a {
+  margin-left: 0.9em;
 }
 .material-symbols-outlined {
   font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 200, "opsz" 48;
@@ -68,6 +116,10 @@
   background-color: rgb(0, 149, 246);
   color: #fff;
 }
+.follow .blue-btn {
+  color: #000;
+  background-color: transparent;
+}
 .pk1 .blue-arrow-btn {
   background-color: rgb(0, 149, 246);
   width: 30px;
@@ -112,6 +164,9 @@ p {
   text-decoration: none;
   color: rgb(0, 55, 107);
   font-weight: 600;
+}
+.pk3 a:hover {
+  text-decoration: underline;
 }
 .pk4 h5 {
   font-size: 0.8rem;
@@ -173,6 +228,7 @@ p {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  cursor: pointer;
 }
 .story-circle img {
   width: 86px;
@@ -206,7 +262,7 @@ p {
 .tagged {
   opacity: 0.5;
 }
-.post-img {
+.image-container {
   width: 80%;
   display: grid;
   gap: 2em;
@@ -217,9 +273,39 @@ p {
   justify-content: center;
   width: 290px;
   height: 290px;
+  cursor: pointer;
 }
-.post-img img {
+.image-container img {
   border: 1px solid #ccc;
   width: 270px;
   height: 300px;
+}
+.pop-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+  /* overflow: hidden; */
+}
+.pop-image span {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+}
+.pop-image img {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-30%, -30%);
+  width: 350px;
+  object-fit: cover;
 }

@@ -23,6 +23,30 @@
     />
   </head>
   <body>
+    <nav class="nav">
+      <a href="index.html"
+        ><img src="./images/instatextlogo.PNG" alt="" class="logo-text"
+      /></a>
+      <div class="search">
+        <input
+          type="text"
+          placeholder="Search here to get number of images"
+          id="input-value"
+        />
+        <a href="#feed-scroll" id="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+      </div>
+      <div class="icons">
+        <i class="fa-solid fa-house"></i>
+        <i class="fa-brands fa-facebook-messenger"></i>
+        <i class="fa-regular fa-square-plus"></i>
+        <i class="fa-regular fa-compass"></i>
+        <i class="fa-regular fa-heart"></i>
+        <img src="./images/settings.png" alt="" />
+        <img src="./images/profile/profile1.jpg" alt="" />
+      </div>
+    </nav>
     <section class="main">
       <div class="insta-profile">
         <img src="./images/profile/profile1.jpg" alt="" />
@@ -31,7 +55,7 @@
       <div class="pk-container">
         <div class="pk1">
           <h5>
-            sohail422 <span class="material-symbols-outlined"> verified </span>
+            sohail_422 <span class="material-symbols-outlined"> verified </span>
           </h5>
           <div class="pk1a">
             <button>Message</button>
@@ -51,12 +75,11 @@
           <h5>sohail</h5>
           <div>
             <p>💗 Storyteller, Creator</p>
-
             <p>😉 20 Million Facebook Community | 4 Billion Views</p>
-            <p>🚩 Used to be a Monk</p>
-
             <p>🎵 Podcast</p>
-            <a href="">apple.co/2Gsrqw0</a>
+            <a href="https://imaginative-profiterole-f48c00.netlify.app/"
+              >myWebsite_apple.com</a
+            >
           </div>
         </div>
         <div class="pk4">
@@ -87,7 +110,7 @@
       </div>
     </section>
     <!-- posts -->
-    <section class="feeds">
+    <section class="feeds" id="feed-scroll">
       <div class="posts">
         <div class="post">
           <i class="fa-solid fa-table-cells"></i>
@@ -102,16 +125,31 @@
           <h4>TAGED</h4>
         </div>
       </div>
-      <div class="post-img">
-        <img src="./images/instaLogo.jpg" alt="" />
-        <img src="./images/instaLogo.jpg" alt="" />
-        <img src="./images/instaLogo.jpg" alt="" />
-        <img src="./images/instaLogo.jpg" alt="" />
-        <img src="./images/instaLogo.jpg" alt="" />
-        <img src="./images/instaLogo.jpg" alt="" />
-        <img src="./images/instaLogo.jpg" alt="" />
+      <div class="image-container">
+        <div class="image">
+          <img src="./images/instacircle.png" alt="" />
+        </div>
+        <div class="image">
+          <img src="./images/instaLogo.jpg" alt="" />
+        </div>
+        <div class="image">
+          <img src="./images/all.png" alt="" />
+        </div>
+        <div class="image">
+          <img src="./images/all.png" alt="" />
+        </div>
+        <div class="image">
+          <img src="./images/all.png" alt="" />
+        </div>
+        <div class="image">
+          <img src="./images/all.png" alt="" />
+        </div>
       </div>
     </section>
+    <div class="pop-image">
+      <span>&times;</span>
+      <img src="./images/profile/profile1.jpg" alt="" />
+    </div>
 
     <script src="./app.js"></script>
   </body>

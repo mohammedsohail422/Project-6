@@ -280,11 +280,11 @@ p {
   align-items: center;
   justify-content: center;
   width: 290px;
-  height: 290px;
+  /* height: 290px; */
   cursor: pointer;
 }
 .image-container img {
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   width: 270px;
   height: 300px;
 }
@@ -396,4 +396,8 @@ p {
   background-color: #00acee;
   color: #fff;
   cursor: pointer;
+}
+/* footer */
+.footer {
+  display: flex;
 }

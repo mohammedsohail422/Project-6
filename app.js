@@ -167,7 +167,7 @@ let startProgress = document.querySelector(".image-container img");
 
 startProgress.addEventListener("click", () => {
   console.log("clicking");
-  document.body.style.backgroundColor = "#ccc";
+  document.body.style.backgroundColor = "#efefef";
   containerpro.style.display = "flex";
   let progressStartValue = 0,
     progressEndValue = 100,

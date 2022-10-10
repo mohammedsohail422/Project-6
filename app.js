@@ -106,13 +106,13 @@ blueBtn.addEventListener("click", () => {
     pk1a.classList.remove("follow");
   }
 });
-
+//follow end
 //
-//fun
+//fun fetch no. of images user enters
 submit = document.querySelector("#submit");
 submit.addEventListener("click", () => {
   let inputValue = document.querySelector("#input-value").value;
-  console.log(inputValue);
+  // console.log(inputValue);
   if (inputValue == "") {
     alert(
       "Please input the correct value or by default it will be consider as 12"
@@ -162,35 +162,51 @@ submit.addEventListener("click", () => {
 //circular progess hekki
 let circularProgress = document.querySelector(".circular-progress"),
   progressValue = document.querySelector(".progress-value");
-let containerpro = document.querySelector(".containerpro");
-let startProgress = document.querySelector(".image-container img");
+let model = document.querySelector(".model");
+let startProgress = document.querySelectorAll(".image-container img");
 
-startProgress.addEventListener("click", () => {
-  console.log("clicking");
-  document.body.style.backgroundColor = "#efefef";
-  containerpro.style.display = "flex";
-  let progressStartValue = 0,
-    progressEndValue = 100,
-    speed = 30;
+// for (let i in data) {
+//   //       console.log(data[i].title);
+//   //     }
 
-  let progress = setInterval(() => {
-    progressStartValue++;
+// console.log(startProgress.length);
+for (let i = 0; i < startProgress.length; i++) {
+  startProgress[i].addEventListener("click", () => {
+    console.log("clicking");
 
-    progressValue.textContent = `${progressStartValue}%`;
-    circularProgress.style.background = `conic-gradient(#7d2ae8 ${
-      progressStartValue * 3.6
-    }deg, #ededed 0deg)`;
+    model.style.display = "block";
+    let progressStartValue = 0,
+      progressEndValue = 100,
+      speed = 10;
 
-    if (progressStartValue == progressEndValue) {
-      clearInterval(progress);
+    let progress = setInterval(() => {
+      progressStartValue++;
+
+      progressValue.textContent = `${progressStartValue}%`;
+      circularProgress.style.background = `conic-gradient(#7d2ae8 ${
+        progressStartValue * 3.6
+      }deg, #ededed 0deg)`;
+
+      if (progressStartValue == progressEndValue) {
+        clearInterval(progress);
+      }
+    }, speed);
+  });
+  //
+  let done = document.querySelector(".done");
+
+  done.addEventListener("click", () => {
+    if (progressValue.innerHTML == "100%") {
+      model.style.display = "none";
     }
-  }, speed);
-});
-//
-let done = document.querySelector(".done");
-done.addEventListener("click", () => {
-  if (progressValue.innerHTML == "100%") {
-    containerpro.style.display = "none";
-    document.body.style.backgroundColor = "#fafafa";
-  }
-});
+  });
+  // let model = document.querySelector(".model");
+  // window.onclick = function (event) {
+  //   if (event.target == model) {
+  //     if (progressValue.innerHTML == "100%") {
+  //       model.style.display = "none";
+  //     }
+  //   }
+  // };
+}
+//circular progress end

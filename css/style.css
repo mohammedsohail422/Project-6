@@ -40,6 +40,12 @@ nav i {
   gap: 1.3em;
   cursor: pointer;
 }
+.fa-heart {
+  color: red;
+}
+/* .fa-facebook-messenger {
+  color: #108df3;
+} */
 .search input {
   background-color: #efefef;
   border: none;
@@ -282,7 +288,8 @@ p {
   height: 300px;
 }
 .image:hover {
-  opacity: 0.7;
+  opacity: 0.5;
+  /* background-color: rgba(0, 0, 0, 0.5); */
 }
 .pop-image {
   position: fixed;

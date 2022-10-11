@@ -107,8 +107,8 @@ blueBtn.addEventListener("click", () => {
   }
 });
 //follow end
-//
-//fun fetch no. of images user enters
+
+// //fetch start, fun fetch no. of images user enters
 submit = document.querySelector("#submit");
 submit.addEventListener("click", () => {
   let inputValue = document.querySelector("#input-value").value;
@@ -119,7 +119,7 @@ submit.addEventListener("click", () => {
     );
     inputValue = 12;
   }
-  //fetch
+
   let urls = "https://jsonplaceholder.typicode.com/photos";
   fetch(urls)
     .then((response) => {
@@ -137,37 +137,13 @@ submit.addEventListener("click", () => {
   //
 });
 
-//fun end
-
-//pop
-
-// let imgPop = document
-//   .querySelectorAll(".image-container img")
-//   .forEach((img) => {
-//     img.onclick = () => {
-//       console.log("clickeds");
-//       document.querySelector(".pop-image img").src = img.getAttribute("src");
-//       document.querySelector(".pop-image").style.display = "block";
-//       // console.log(image.getAttribute("src"));
-//     };
-//   });
-
-// //close
-// document.querySelector(".pop-image span").onclick = () => {
-//   document.querySelector(".pop-image").style.display = "none";
-// };
-
-// //pop end
+//fetch end
 
 //circular progess hekki
 let circularProgress = document.querySelector(".circular-progress"),
   progressValue = document.querySelector(".progress-value");
 let model = document.querySelector(".model");
 let startProgress = document.querySelectorAll(".image-container img");
-
-// for (let i in data) {
-//   //       console.log(data[i].title);
-//   //     }
 
 // console.log(startProgress.length);
 for (let i = 0; i < startProgress.length; i++) {
@@ -210,3 +186,23 @@ for (let i = 0; i < startProgress.length; i++) {
   // };
 }
 //circular progress end
+
+//pop start
+
+// let imgPop = document
+//   .querySelectorAll(".image-container img")
+//   .forEach((img) => {
+//     img.onclick = () => {
+//       console.log("clickeds");
+//       document.querySelector(".pop-image img").src = img.getAttribute("src");
+//       document.querySelector(".pop-image").style.display = "block";
+//       // console.log(image.getAttribute("src"));
+//     };
+//   });
+
+// //close
+// document.querySelector(".pop-image span").onclick = () => {
+//   document.querySelector(".pop-image").style.display = "none";
+// };
+
+// //pop end

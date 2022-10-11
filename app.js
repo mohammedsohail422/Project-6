@@ -1,55 +1,72 @@
 let myObj = {
   products: [
     {
-      ProductImage: "/Projects/Project-6/images/sliders/s4.jpg",
+      // ProductImage: "/Projects/Project-6/images/sliders/s4.jpg",
+      ProductImage:
+        "https://xsgames.co/randomusers/assets/avatars/female/11.jpg",
       ProductName: "Highlight🎈",
     },
     {
-      ProductImage: "/Projects/Project-6/images/sliders/s6.jpg",
+      // ProductImage: "/Projects/Project-6/images/sliders/s6.jpg",
+      ProductImage:
+        "https://xsgames.co/randomusers/assets/avatars/female/65.jpg",
       ProductName: "Vacation",
     },
     {
-      ProductImage: "/Projects/Project-6/images/sliders/s7.jpg",
+      // ProductImage: "/Projects/Project-6/images/sliders/s7.jpg",
+      ProductImage: "https://xsgames.co/randomusers/assets/avatars/male/78.jpg",
       ProductName: "London🎢",
     },
     {
-      ProductImage: "/Projects/Project-6/images/sliders/s8.jpg",
+      // ProductImage: "/Projects/Project-6/images/sliders/s8.jpg",
+      ProductImage: "https://xsgames.co/randomusers/assets/avatars/male/9.jpg",
       ProductName: "USA",
     },
     {
-      ProductImage: "/Projects/Project-6/images/sliders/s3.jpg",
+      // ProductImage: "/Projects/Project-6/images/sliders/s3.jpg",
+      ProductImage: "https://xsgames.co/randomusers/assets/avatars/male/21.jpg",
       ProductName: "Birthday🎂",
     },
     {
-      ProductImage: "/Projects/Project-6/images/sliders/s2.jpg",
+      // ProductImage: "/Projects/Project-6/images/sliders/s2.jpg",
+      ProductImage: "https://xsgames.co/randomusers/assets/avatars/male/37.jpg",
       ProductName: "office💻",
     },
     {
-      ProductImage: "/Projects/Project-6/images/sliders/s1.jpg",
+      // ProductImage: "/Projects/Project-6/images/sliders/s1.jpg",
+      ProductImage: "https://xsgames.co/randomusers/assets/avatars/male/38.jpg",
       ProductName: "Banglore",
     },
     {
-      ProductImage: "/Projects/Project-6/images/sliders/s2.jpg",
+      // ProductImage: "/Projects/Project-6/images/sliders/s2.jpg",
+      ProductImage:
+        "https://xsgames.co/randomusers/assets/avatars/female/43.jpg",
       ProductName: "Canada",
     },
     {
-      ProductImage: "/Projects/Project-6/images/sliders/s5.jpg",
+      // ProductImage: "/Projects/Project-6/images/sliders/s5.jpg",
+      ProductImage: "https://xsgames.co/randomusers/assets/avatars/male/6.jpg",
       ProductName: "Sucess",
     },
     {
-      ProductImage: "/Projects/Project-6/images/sliders/s4.jpg",
+      // ProductImage: "/Projects/Project-6/images/sliders/s4.jpg",
+      ProductImage: "https://xsgames.co/randomusers/assets/avatars/male/26.jpg",
       ProductName: "apple",
     },
     {
-      ProductImage: "/Projects/Project-6/images/sliders/s1.jpg",
+      // ProductImage: "/Projects/Project-6/images/sliders/s4.jpg",
+      ProductImage:
+        "https://xsgames.co/randomusers/assets/avatars/female/11.jpg",
       ProductName: "tv",
     },
     {
-      ProductImage: "/Projects/Project-6/images/sliders/s3.jpg",
+      // ProductImage: "/Projects/Project-6/images/sliders/s2.jpg",
+      ProductImage: "https://xsgames.co/randomusers/assets/avatars/male/37.jpg",
       ProductName: "watch",
     },
     {
-      ProductImage: "/Projects/Project-6/images/sliders/s2.jpg",
+      // ProductImage: "/Projects/Project-6/images/sliders/s2.jpg",
+      ProductImage: "https://xsgames.co/randomusers/assets/avatars/male/6.jpg",
       ProductName: "apple",
     },
   ],
@@ -121,6 +138,8 @@ submit.addEventListener("click", () => {
   }
 
   let urls = "https://jsonplaceholder.typicode.com/photos";
+  // let urls = "https://akabab.github.io/starwars-api/api/all.json";
+
   fetch(urls)
     .then((response) => {
       return response.json();
@@ -130,61 +149,71 @@ submit.addEventListener("click", () => {
       for (let i = 0; i < inputValue; i++) {
         data1 += `<div class="image">
         <img src=${data[i].url} alt="im" class="start-progress" />
+        <div class = "ranger">
+        <img src="" alt="im" class="one" />
+        
+        </div>
       </div>`;
       }
       document.querySelector(".image-container").innerHTML = data1;
+      testing();
     });
   //
 });
 
 //fetch end
 
-//circular progess hekki
-let circularProgress = document.querySelector(".circular-progress"),
-  progressValue = document.querySelector(".progress-value");
-let model = document.querySelector(".model");
-let startProgress = document.querySelectorAll(".image-container img");
+function testing() {
+  //circular progess hekki
+  let circularProgress = document.querySelector(".circular-progress"),
+    progressValue = document.querySelector(".progress-value");
+  let model = document.querySelector(".model");
+  let startProgress = document.querySelectorAll(".start-progress");
+  let image = document.querySelector(".image");
+  let one = document.querySelectorAll(".one");
 
-// console.log(startProgress.length);
-for (let i = 0; i < startProgress.length; i++) {
-  startProgress[i].addEventListener("click", () => {
-    console.log("clicking");
+  // console.log(startProgress.length);
+  for (let i = 0; i < startProgress.length; i++) {
+    startProgress[i].addEventListener("click", () => {
+      // if (progressValue.innerHTML == "100%") {
+      // }
 
-    model.style.display = "block";
-    let progressStartValue = 0,
-      progressEndValue = 100,
-      speed = 10;
+      model.style.display = "block";
+      let progressStartValue = 0,
+        progressEndValue = 100,
+        speed = 10;
 
-    let progress = setInterval(() => {
-      progressStartValue++;
+      let progress = setInterval(() => {
+        progressStartValue++;
 
-      progressValue.textContent = `${progressStartValue}%`;
-      circularProgress.style.background = `conic-gradient(#7d2ae8 ${
-        progressStartValue * 3.6
-      }deg, #ededed 0deg)`;
+        progressValue.textContent = `${progressStartValue}%`;
+        circularProgress.style.background = `conic-gradient(#7d2ae8 ${
+          progressStartValue * 3.6
+        }deg, #ededed 0deg)`;
 
-      if (progressStartValue == progressEndValue) {
-        clearInterval(progress);
-      }
-    }, speed);
-  });
-  //
-  let done = document.querySelector(".done");
+        if (progressStartValue == progressEndValue) {
+          model.style.display = "none";
+          // one[i].setAttribute("src", startProgress[i].src);
+          // one[i].style.display = "block";
+          clearInterval(progress);
+        }
+      }, speed);
+    });
+    //
+    let done = document.querySelector(".done");
 
-  done.addEventListener("click", () => {
-    if (progressValue.innerHTML == "100%") {
-      model.style.display = "none";
-    }
-  });
-  // let model = document.querySelector(".model");
-  // window.onclick = function (event) {
-  //   if (event.target == model) {
-  //     if (progressValue.innerHTML == "100%") {
-  //       model.style.display = "none";
-  //     }
-  //   }
-  // };
+    done.addEventListener("click", () => {});
+    // let model = document.querySelector(".model");
+    // window.onclick = function (event) {
+    //   if (event.target == model) {
+    //     if (progressValue.innerHTML == "100%") {
+    //       model.style.display = "none";
+    //     }
+    //   }
+    // };
+  }
 }
+testing();
 //circular progress end
 
 //pop start
